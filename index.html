@@ -1,0 +1,2786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://missionbillionaire.netlify.app/">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Growth Warrior | Elite Student Growth, Discipline & Wealth Community</title>
+  <meta name="description"
+    content="Build iron discipline, high-income skills, startup networks, and financial literacy. Join Growth Warrior to unlock your full potential with daily accountability.">
+  <meta name="keywords"
+    content="Growth Warrior, student founders, accountability community, entrepreneurship, monk mode challenge, startup learning, financial independence">
+  <meta name="author" content="Growth Warrior Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missionbillionaire.netlify.app/">
+  <meta property="og:title" content="Join The Growth Warrior Community | Elite Student Growth">
+  <meta property="og:description"
+    content="Build iron discipline, high-income skills, and wealth with like-minded ambitious student creators and aspiring founders. Claim your 21-Day Monk Mode Challenge free!">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=630">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://missionbillionaire.netlify.app/">
+  <meta property="twitter:title" content="Join The Growth Warrior Community | Elite Student Growth">
+  <meta property="twitter:description"
+    content="Build iron discipline, high-income skills, and wealth with like-minded ambitious student creators and aspiring founders. Claim your 21-Day Monk Mode Challenge free!">
+  <meta property="twitter:image"
+    content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=630">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#030712',
+            brandCard: 'rgba(255, 255, 255, 0.02)',
+            cyberCyan: '#ff6b00', // mapped to brand neon orange!
+            cyberPurple: '#ffffff', // mapped to brand active white!
+            neonGreen: '#ff9c4d', // mapped to warm orange-amber!
+            brandOrange: '#ff6b00',
+            brandOrangeLight: '#ff8a3d',
+            brandWhite: '#ffffff',
+            cyan: {
+              400: '#ff8a3d',
+              500: '#ff6b00',
+              600: '#ea580c',
+            },
+            purple: {
+              400: '#ffffff',
+              500: '#ff6b00',
+              600: '#ea580c',
+            },
+            indigo: {
+              400: '#ffca99',
+              500: '#ff6b00',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'neon-cyan': '0 0 18px rgba(255, 107, 0, 0.3)',
+            'neon-purple': '0 0 18px rgba(255, 255, 255, 0.2)',
+            'neon-green': '0 0 18px rgba(255, 156, 77, 0.2)',
+            'neon-orange': '0 0 25px rgba(255, 107, 0, 0.55)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Core Styles -->
+  <style type="text/css">
+    /* Glassmorphism utility class */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .glass-input {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-input:focus {
+      border-color: rgba(255, 107, 0, 0.7);
+      box-shadow: 0 0 12px rgba(255, 107, 0, 0.35);
+      background: rgba(255, 255, 255, 0.05);
+      outline: none;
+    }
+
+    /* Aurora Glow background blobs */
+    .aurora-blob {
+      filter: blur(120px);
+      mix-blend-mode: plus-lighter;
+      pointer-events: none;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #030712;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Animate background gradients */
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.35;
+      }
+
+      50% {
+        transform: scale(1.15);
+        opacity: 0.55;
+      }
+    }
+
+    .animate-pulseGlow {
+      animation: pulseGlow 10s infinite alternate ease-in-out;
+    }
+
+    /* Preloader styling */
+    .loader-spin {
+      border: 3px solid rgba(255, 107, 0, 0.1);
+      border-radius: 50%;
+      border-top-color: #ff6b00;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Custom premium transitions */
+    @keyframes slideInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: slideInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes pulseOrangeGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(255, 107, 0, 0.25);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(255, 107, 0, 0.55), 0 0 50px rgba(255, 107, 0, 0.15);
+      }
+    }
+
+    .animate-orangeGlow {
+      animation: pulseOrangeGlow 2.5s infinite ease-in-out;
+    }
+  </style>
+
+  <!-- Structured Schema Data (SEO optimization) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Growth Warrior",
+          "url": "https://missionbillionaire.netlify.app",
+          "description": "An elite community and growth program designed for students, freelancers, and aspiring founders to build discipline and high-income skills.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Growth Warrior",
+            "logo": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "description": "Free admission for first 100 eligible students"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Growth Warrior?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Growth Warrior is a private growth-focused community designed for ambitious students, future founders, freelancers, and aspiring creators. We focus on building discipline, high-income skills, startup networks, and financial independence through action-based learning and daily verification."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who can join the community?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Any student, freelancer, or builder between 14-30 years of age who is committed to continuous growth, personal excellence, and real-world execution. No prior coding or design skills are mandatory, but high commitment is required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it completely free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, currently applications are free for the first 100 accepted students. However, we have a strict vetting pipeline to ensure only serious executors who are dedicated to mutual growth join the workspace."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does daily accountability work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each member is assigned a peer cohort and a team partner. You submit your primary tasks in the morning and verify completions with proof in the evening. Consistent slacking results in warnings and eventual suspension to keep the standard high."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What high-income capabilities will I learn?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide framework checklists and structured guide databases on modern skills: visual identity design, freelance agency operations, copy writing, landing page building, modern automation tools, sales cold outreach, and startup models."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the Referral System work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upon successful form application, the system generates a unique Ambassador code for you. You get a personalized sharing URL. When peers use your link to apply, your ambassador score goes up, unlocking advanced training courses (Personality Development, Rhetoric Speaking, Psychological Confidence frameworks) at 5, 10, 15, and 20 referrals!"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body
+  class="bg-brandDark text-slate-100 font-sans min-h-screen overflow-x-hidden relative selection:bg-cyberCyan selection:text-brandDark">
+
+  <!-- ====================================
+       BACKGROUND NEON AURORAS
+       ==================================== -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+    <div
+      class="aurora-blob absolute w-[400px] h-[400px] rounded-full bg-cyberPurple/25 top-[-100px] left-[-150px] animate-pulseGlow">
+    </div>
+    <div
+      class="aurora-blob absolute w-[500px] h-[500px] rounded-full bg-cyberCyan/15 top-[600px] right-[-100px] animate-pulseGlow"
+      style="animation-delay: 3s;"></div>
+    <div
+      class="aurora-blob absolute w-[450px] h-[450px] rounded-full bg-cyberPurple/10 top-[1800px] left-[-200px] animate-pulseGlow"
+      style="animation-delay: 5s;"></div>
+    <div
+      class="aurora-blob absolute w-[600px] h-[600px] rounded-full bg-cyberCyan/10 bottom-[200px] right-[-150px] animate-pulseGlow"
+      style="animation-delay: 1s;"></div>
+  </div>
+
+  <!-- ====================================
+       CUSTOM PRELOADER
+       ==================================== -->
+  <div id="preloader"
+    class="fixed inset-0 bg-brandDark z-50 flex flex-col items-center justify-center transition-opacity duration-500">
+    <div class="relative w-24 h-24 mb-4">
+      <div class="loader-spin absolute inset-0"></div>
+      <div
+        class="absolute inset-0 flex items-center justify-center font-heading font-extrabold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyberCyan to-cyberPurple">
+        MB
+      </div>
+    </div>
+    <div class="font-heading font-semibold text-sm tracking-widest text-slate-400 uppercase">
+      LOADING EXCELLENCE
+    </div>
+  </div>
+
+  <!-- ====================================
+       STICKY NAVIGATION BAR
+       ==================================== -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 bg-brandDark/85 backdrop-blur-md border-b border-white/[0.05] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyberCyan to-cyberPurple flex items-center justify-center text-brandDark font-heading font-black text-lg transition-transform duration-300 group-hover:scale-105">
+          GW
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-heading font-extrabold text-lg tracking-wider text-slate-50 uppercase leading-none">GROWTH</span>
+          <span
+            class="font-heading font-semibold text-xs tracking-widest text-cyberCyan uppercase mt-0.5 leading-none">WARRIOR</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 font-heading text-sm font-semibold tracking-wide text-slate-300">
+        <a href="#mission" class="hover:text-cyberCyan transition-colors duration-200">Our Mission</a>
+        <a href="#gift" class="hover:text-cyberCyan transition-colors duration-200">Free Gift</a>
+        <a href="#benefits" class="hover:text-cyberCyan transition-colors duration-200">Benefits</a>
+        <a href="#testimonials" class="hover:text-cyberCyan transition-colors duration-200">Reviews</a>
+        <a href="#faq" class="hover:text-cyberCyan transition-colors duration-200">FAQs</a>
+        <button id="nav-lookup-btn" type="button"
+          class="hover:text-cyberCyan flex items-center gap-1 transition-colors duration-200 focus:outline-none">🔑
+          Check Referrals</button>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="#apply"
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-bold tracking-wide text-slate-50 rounded-lg group bg-gradient-to-br from-cyberCyan to-cyberPurple hover:text-brandDark dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800 transition-all duration-300 hover:shadow-neon-cyan">
+          <span
+            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-brandDark rounded-md group-hover:bg-opacity-0">
+            Apply For Free
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button"
+        class="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-white/[0.05] focus:outline-none"
+        aria-label="Toggle Menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden glass-panel border-t border-white/[0.05] px-4 pt-4 pb-6 space-y-3 font-heading text-sm font-semibold">
+      <a href="#mission"
+        class="block px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all">Our
+        Mission</a>
+      <a href="#gift"
+        class="block px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all">Free
+        Gift</a>
+      <a href="#benefits"
+        class="block px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all">Benefits</a>
+      <a href="#testimonials"
+        class="block px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all">Reviews</a>
+      <a href="#faq"
+        class="block px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all">FAQs</a>
+      <button id="mobile-lookup-btn" type="button"
+        class="block w-full text-left px-3 py-2 rounded-lg text-slate-300 hover:text-cyberCyan hover:bg-white/[0.02] transition-all focus:outline-none">🔑
+        Check Referrals</button>
+      <a href="#apply"
+        class="block w-full text-center py-3 rounded-lg bg-gradient-to-r from-cyberCyan to-cyberPurple text-brandDark font-extrabold shadow-neon-cyan mt-4">Apply
+        For Free</a>
+    </div>
+  </header>
+
+  <!-- Spacer to account for sticky nav -->
+  <div class="h-20"></div>
+
+  <!-- ====================================
+       HERO SECTION
+       ==================================== -->
+  <section class="relative py-12 md:py-20 lg:py-28 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Headline & Subhead Container -->
+      <div class="text-center max-w-4xl mx-auto">
+
+        <!-- Premium Tag -->
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold tracking-widest text-cyberCyan bg-cyberCyan/[0.08] border border-cyberCyan/[0.15] mb-6 uppercase shadow-neon-cyan animate-pulse">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyberCyan"></span>
+          Now Inviting Cohort 5 Applications
+        </span>
+
+        <!-- Headline -->
+        <h1
+          class="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white leading-[1.1] mb-6">
+          Join The <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyberCyan via-indigo-400 to-cyberPurple">Growth
+            Warrior</span> Community
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="font-sans text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+          Build iron discipline, high-income skills, startup networks &amp; financial independence with like-minded
+          ambitious student builders, freelancers, and entrepreneurs.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#apply"
+            class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading font-bold text-sm tracking-wider uppercase text-brandDark bg-gradient-to-r from-cyberCyan to-cyberPurple hover:opacity-90 transform hover:-translate-y-0.5 transition-all shadow-neon-cyan duration-200">
+            Join Free Now
+          </a>
+          <a href="#gift"
+            class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading font-bold text-sm tracking-wider uppercase text-slate-200 hover:text-white glass-panel border border-white/[0.08] hover:border-white/[0.18] hover:bg-white/[0.04] transform hover:-translate-y-0.5 transition-all duration-200">
+            Claim Free Gift
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="max-w-5xl mx-auto mb-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <!-- Badge 1 -->
+          <div
+            class="glass-panel p-4 rounded-xl flex items-center gap-3 border border-white/[0.04] hover:border-cyberCyan/35 transition-all group">
+            <div
+              class="w-10 h-10 rounded-lg bg-cyberCyan/10 flex items-center justify-center text-cyberCyan group-hover:scale-105 transition-transform duration-300">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-xs tracking-wider uppercase text-slate-100 leading-none">
+                ACCOUNTABILITY</p>
+              <span class="font-sans text-[11px] text-slate-400">Strict Daily Verification</span>
+            </div>
+          </div>
+
+          <!-- Badge 2 -->
+          <div
+            class="glass-panel p-4 rounded-xl flex items-center gap-3 border border-white/[0.04] hover:border-cyberPurple/35 transition-all group">
+            <div
+              class="w-10 h-10 rounded-lg bg-cyberPurple/10 flex items-center justify-center text-cyberPurple group-hover:scale-105 transition-transform duration-300">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-xs tracking-wider uppercase text-slate-100 leading-none">ELITE
+                COMMUNITY</p>
+              <span class="font-sans text-[11px] text-slate-400">Ambitious Peer Group</span>
+            </div>
+          </div>
+
+          <!-- Badge 3 -->
+          <div
+            class="glass-panel p-4 rounded-xl flex items-center gap-3 border border-white/[0.04] hover:border-cyan-400/35 transition-all group">
+            <div
+              class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform duration-300">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-xs tracking-wider uppercase text-slate-100 leading-none">DAILY
+                GROWTH</p>
+              <span class="font-sans text-[11px] text-slate-400">1% Continuous Action</span>
+            </div>
+          </div>
+
+          <!-- Badge 4 -->
+          <div
+            class="glass-panel p-4 rounded-xl flex items-center gap-3 border border-white/[0.04] hover:border-purple-400/35 transition-all group">
+            <div
+              class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform duration-300">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-xs tracking-wider uppercase text-slate-100 leading-none">
+                STARTUP LEARNING</p>
+              <span class="font-sans text-[11px] text-slate-400">No Theoretical Fluff</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Animated Counters Section -->
+      <div id="stats-counter-panel" class="max-w-6xl mx-auto">
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-white/[0.05] relative overflow-hidden">
+
+          <!-- Background accent lines inside panel -->
+          <div class="absolute inset-0 bg-gradient-to-r from-cyberCyan/5 to-cyberPurple/5 opacity-50"></div>
+
+          <div
+            class="relative grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/[0.05]">
+
+            <!-- Stat 1 -->
+            <div class="pt-0 lg:pt-0">
+              <div class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-2 tracking-tight">
+                <span class="counter-number inline-block" data-target="1200">0</span>+
+              </div>
+              <p class="font-heading font-semibold text-xs tracking-widest text-cyberCyan uppercase">Active Members</p>
+              <span class="font-sans text-xs text-slate-500 mt-1 block">Nationwide Student Network</span>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="pt-6 sm:pt-0 sm:pl-0 lg:pl-6">
+              <div class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-2 tracking-tight">
+                <span class="counter-number inline-block" data-target="99">0</span>%
+              </div>
+              <p class="font-heading font-semibold text-xs tracking-widest text-cyberPurple uppercase">Daily
+                Accountability</p>
+              <span class="font-sans text-xs text-slate-500 mt-1 block">Success Tracking Success</span>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="pt-6 lg:pt-0 lg:pl-6">
+              <div class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-2 tracking-tight">
+                <span class="counter-number inline-block" data-target="12">0</span>+
+              </div>
+              <p class="font-heading font-semibold text-xs tracking-widest text-cyberCyan uppercase">Growth Challenges
+              </p>
+              <span class="font-sans text-xs text-slate-500 mt-1 block">Rigorous Execution Sprints</span>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="pt-6 lg:pt-0 lg:pl-6">
+              <div class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-2 tracking-tight">
+                <span class="counter-number inline-block" data-target="150">0</span>+
+              </div>
+              <p class="font-heading font-semibold text-xs tracking-widest text-cyberPurple uppercase">Learning
+                Resources</p>
+              <span class="font-sans text-xs text-slate-500 mt-1 block">Curated Blueprints & Guides</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       MISSION SECTION
+       ==================================== -->
+  <section id="mission" class="relative py-20 z-10 bg-brandDark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white mb-4">
+          Our Mission
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyberCyan to-cyberPurple mx-auto mb-6 rounded-full"></div>
+        <p class="font-sans text-base sm:text-lg text-slate-400 leading-relaxed">
+          Growth Warrior is a private growth-focused community helping students become disciplined, skilled,
+          productive, and financially independent through accountability, networking, and practical learning. We bridge
+          the gap between academic theory and real-world execution.
+        </p>
+      </div>
+
+      <!-- 6 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Pillar 1: Discipline -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-cyberCyan/30 group hover:shadow-neon-cyan transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">1. Discipline</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Eliminate procrastination with our structured accountability protocols, strict check-ins, and consistent
+            habit tracking mechanisms designed to wire your mind for action.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Skill Development -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-cyberPurple/30 group hover:shadow-neon-purple transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">2. Skill Development</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Acquire modern high-income leverage skills: copywriting, full-stack development, AI prompt engineering,
+            media production, and sales automation.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Networking -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-cyan-400/30 group hover:shadow-neon-cyan transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">3. Networking</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Surround yourself with the top 1% of ambitious peers. Tap into co-founder matchings, masterminds, joint
+            ventures, and feedback networks that multiply your capabilities.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Entrepreneurship -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-purple-400/30 group hover:shadow-neon-purple transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">4. Entrepreneurship</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Move from employee mindset to builder mindset. Learn to identify high-potential market gaps, validate
+            SaaS/agency concepts, and generate early cashflows.
+          </p>
+        </div>
+
+        <!-- Pillar 5: Financial Literacy -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-cyberCyan/30 group hover:shadow-neon-cyan transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">5. Financial Literacy</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Understand cashflow, taxes, compound assets, and investment mechanics. Stop trading time for money blindly
+            and learn how to manage and scale capital effectively.
+          </p>
+        </div>
+
+        <!-- Pillar 6: Execution -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] hover:border-cyberPurple/30 group hover:shadow-neon-purple transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3">6. Execution</h3>
+          <p class="font-sans text-sm text-slate-400 leading-relaxed">
+            Knowledge without speed is useless. We focus heavily on shipment speeds, weekly delivery targets, and
+            real-world feedback rather than passive consumption.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       FREE GIFT SECTION & COUNTDOWN
+       ==================================== -->
+  <section id="gift" class="relative py-20 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="glass-panel rounded-3xl border border-white/[0.06] overflow-hidden relative shadow-neon-purple">
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyberPurple/[0.03] to-cyberCyan/[0.03] opacity-60"></div>
+
+        <div class="relative p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Text & Package Info -->
+          <div class="lg:col-span-7">
+
+            <span
+              class="inline-block px-3 py-1 text-xs font-black tracking-widest text-cyberPurple bg-cyberPurple/10 border border-cyberPurple/25 rounded-md mb-6 uppercase">
+              Limited Offer
+            </span>
+
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight mb-2">
+              FREE BONUS WORTH <span class="text-cyberPurple">₹1,500</span>
+            </h2>
+            <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-cyberCyan mb-6">
+              21-Day Monk Mode Challenge Booklet
+            </h3>
+
+            <p class="font-sans text-slate-400 mb-8 leading-relaxed">
+              Unlock the foundational, action-focused manual that has helped thousands of high-performers break screen
+              addiction, build unbreakable focus, and construct custom daily schedules. Includes structured resources:
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold tracking-wide text-slate-200 mb-8">
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Daily Accountability Tracker
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Habit Building System
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Productivity Framework
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Focus Blueprint
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Goal Tracking Templates
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan">
+                  ✓
+                </span>
+                Daily Action Sheets
+              </li>
+            </ul>
+
+            <!-- Seats dynamic indicator -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-300">
+                <span>Offer Limit Progress</span>
+                <span class="text-neonGreen animate-pulse"><span id="seats-left">12</span> Seats Left Out Of 100!</span>
+              </div>
+              <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-white/[0.05]">
+                <div id="seats-progress"
+                  class="bg-gradient-to-r from-cyberCyan to-neonGreen h-full transition-all duration-1000"
+                  style="width: 12%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Price Badge & Countdown Box -->
+          <div class="lg:col-span-5 w-full flex flex-col items-center">
+
+            <div
+              class="glass-panel w-full p-8 rounded-2xl border border-white/[0.08] relative text-center flex flex-col items-center justify-center mb-6">
+
+              <!-- Crossed out & Free pricing badges -->
+              <div class="mb-6">
+                <span class="text-slate-500 font-heading text-lg font-bold line-through tracking-wider">₹1500
+                  VALUE</span>
+                <div
+                  class="font-heading font-black text-6xl text-white tracking-tight mt-1 flex items-start justify-center">
+                  FREE<span
+                    class="text-xs text-cyberCyan font-bold tracking-widest uppercase ml-1.5 mt-2 bg-cyberCyan/10 px-2 py-0.5 rounded-md border border-cyberCyan/20">NOW</span>
+                </div>
+              </div>
+
+              <!-- Offer Ends In Caption -->
+              <span class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">EXPIRED SOON IN</span>
+
+              <!-- Live Countdown Clock -->
+              <div class="flex items-center gap-3 select-none">
+
+                <!-- Hours -->
+                <div class="flex flex-col items-center">
+                  <div id="hour-box"
+                    class="w-16 h-16 rounded-xl bg-slate-950 border border-white/[0.05] flex items-center justify-center font-heading font-bold text-2xl text-white shadow-inner">
+                    00
+                  </div>
+                  <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mt-1.5">Hours</span>
+                </div>
+
+                <!-- Spacer -->
+                <span class="font-heading text-xl text-cyberCyan font-extrabold pb-4">:</span>
+
+                <!-- Minutes -->
+                <div class="flex flex-col items-center">
+                  <div id="minute-box"
+                    class="w-16 h-16 rounded-xl bg-slate-950 border border-white/[0.05] flex items-center justify-center font-heading font-bold text-2xl text-white shadow-inner">
+                    00
+                  </div>
+                  <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mt-1.5">Mins</span>
+                </div>
+
+                <!-- Spacer -->
+                <span class="font-heading text-xl text-cyberCyan font-extrabold pb-4">:</span>
+
+                <!-- Seconds -->
+                <div class="flex flex-col items-center">
+                  <div id="second-box"
+                    class="w-16 h-16 rounded-xl bg-slate-950 border border-white/[0.05] flex items-center justify-center font-heading font-bold text-2xl text-white shadow-inner">
+                    00
+                  </div>
+                  <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mt-1.5">Secs</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <a href="#apply"
+              class="w-full text-center py-4 rounded-xl font-heading font-extrabold text-sm tracking-wider uppercase text-brandDark bg-gradient-to-r from-cyberCyan to-cyberPurple hover:scale-[1.02] transform transition-all shadow-neon-cyan duration-200">
+              Claim Free Monk Mode Booklet
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       COMMUNITY BENEFITS SECTION
+       ==================================== -->
+  <section id="benefits" class="relative py-20 z-10 bg-brandDark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white mb-4">
+          Unrivaled Community Benefits
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyberCyan to-cyberPurple mx-auto mb-6 rounded-full"></div>
+        <p class="font-sans text-base sm:text-lg text-slate-400">
+          Everything you need to level up your mindset, master high-paying capabilities, and network with elite peers.
+        </p>
+      </div>
+
+      <!-- Grid of 8 Benefits -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberCyan/25 hover:shadow-neon-cyan transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Daily Accountability</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Strict check-ins, automated tracker bots, and team check-ins to make sure you never miss a daily goal.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberPurple/25 hover:shadow-neon-purple transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Weekly Growth Sessions</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Join private live mastermind calls, expert sessions, and open-mic Q&amp;As to crush your bottlenecks.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberCyan/25 hover:shadow-neon-cyan transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Startup Discussions</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Exchange feedback, critique business models, source early beta testers, and secure co-founder matches.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberPurple/25 hover:shadow-neon-purple transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H4a2 2 0 00-2 2v10a2 2 0 002 2h3.586a1 1 0 01.707.293l2.242 2.242a1 1 0 001.414 0l2.242-2.242a1 1 0 01.707-.293H20a2 2 0 002-2V9a2 2 0 00-2-2h-4" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Business Resources</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Get instant access to ready-to-use template vaults, cold email frameworks, and client contract templates.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberPurple/25 hover:shadow-neon-purple transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Productivity System</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Master Notion databases, time-blocking strategies, focus trackers, and dynamic task delegation.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberCyan/25 hover:shadow-neon-cyan transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Growth Network</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Collaborate, build joint-ventures, trade expertise, and network with students from top colleges globally.
+          </p>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberPurple/25 hover:shadow-neon-purple transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberPurple/10 flex items-center justify-center text-cyberPurple mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Elite Community</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            Strict filtration ensures only highly-motivated executioners get entry, maintaining an extremely high
+            signal-to-noise ratio.
+          </p>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="glass-panel p-6 rounded-2xl border border-white/[0.03] hover:border-cyberCyan/25 hover:shadow-neon-cyan transition-all duration-300 group">
+          <div
+            class="w-12 h-12 rounded-lg bg-cyberCyan/10 flex items-center justify-center text-cyberCyan mb-5 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Action-Oriented</h3>
+          <p class="font-sans text-xs text-slate-400 leading-relaxed">
+            We don't focus on video lectures; we build systems, create content, deploy applications, and make real
+            money.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       APPLICATION FORM SECTION
+       ==================================== -->
+  <section id="apply" class="relative py-20 z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Main Application Container -->
+      <div id="application-container"
+        class="glass-panel p-8 sm:p-12 lg:p-16 rounded-3xl border border-white/[0.06] shadow-2xl relative overflow-hidden transition-all duration-500">
+
+        <!-- Tab Selector Controls (UX improvement for referral search lookup) -->
+        <div id="portal-tabs" class="flex border-b border-white/[0.08] mb-8 select-none">
+          <button id="tab-apply" type="button"
+            class="w-1/2 pb-4 text-center font-heading font-extrabold text-xs sm:text-sm tracking-wider uppercase border-b-2 border-brandOrange text-white transition-all duration-300">
+            📋 Apply For Access
+          </button>
+          <button id="tab-lookup" type="button"
+            class="w-1/2 pb-4 text-center font-heading font-semibold text-xs sm:text-sm tracking-wider uppercase border-b-2 border-transparent text-slate-400 hover:text-white transition-all duration-300">
+            🔑 Ambassador Lookup
+          </button>
+        </div>
+
+        <!-- Application View -->
+        <div id="form-view">
+
+          <!-- Wrapped form content tab -->
+          <div id="form-tab-content" class="animate-fade-in space-y-6">
+
+            <div class="text-center mb-10">
+              <span
+                class="inline-block px-3 py-1 text-[10px] font-black tracking-widest text-brandOrange bg-brandOrange/10 border border-brandOrange/25 rounded-md mb-4 uppercase">
+                Apply For Membership
+              </span>
+              <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-3">
+                Elite Access Application
+              </h2>
+              <p class="font-sans text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
+                Membership is currently free, but heavily gated. Fill out the application form with complete honesty.
+              </p>
+            </div>
+
+            <!-- Netlify Submitting Form -->
+            <form id="mb-netlify-form" name="mission-billionaire-application" method="POST" data-netlify="true"
+              class="space-y-6" action="/success">
+
+              <!-- Dynamic hidden input required for Netlify Forms processing -->
+              <input type="hidden" name="form-name" value="mission-billionaire-application" />
+              <input type="hidden" id="referrer-code" name="Referrer Code" value="" />
+              <input type="hidden" id="referrer-name" name="Referrer Name" value="" />
+
+              <!-- Input Fields Row 1 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <!-- Full Name -->
+                <div>
+                  <label for="fullname"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Full Name
+                    <span class="text-red-500">*</span></label>
+                  <input type="text" id="fullname" name="Full Name" required placeholder="John Doe"
+                    class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please enter
+                    your full name.</span>
+                </div>
+
+                <!-- Age -->
+                <div>
+                  <label for="age"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Age <span
+                      class="text-red-500">*</span></label>
+                  <input type="number" id="age" name="Age" min="14" max="99" required placeholder="20"
+                    class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please enter
+                    a valid age (14-99).</span>
+                </div>
+
+              </div>
+
+              <!-- Input Fields Row 2 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <!-- Profession -->
+                <div>
+                  <label for="profession"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Profession
+                    <span class="text-red-500">*</span></label>
+                  <select id="profession" name="Profession" required
+                    class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium bg-slate-900 border border-white/[0.08] focus:bg-slate-900">
+                    <option value="" disabled selected>Select Profession</option>
+                    <option value="Student">Student</option>
+                    <option value="Freelancer">Freelancer</option>
+                    <option value="Aspiring Founder">Aspiring Founder</option>
+                    <option value="Creator">Content Creator</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
+
+
+                  </select>
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please select
+                    your current profession.</span>
+                </div>
+
+                <!-- State -->
+                <div>
+                  <label for="state"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">State /
+                    Region <span class="text-red-500">*</span></label>
+                  <input type="text" id="state" name="State" required placeholder="Maharashtra"
+                    class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please enter
+                    your state/region.</span>
+                </div>
+
+              </div>
+
+              <!-- Skills -->
+              <div>
+                <label for="skills"
+                  class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Current
+                  Skills <span class="text-red-500">*</span></label>
+                <input type="text" id="skills" name="Skills" required
+                  placeholder="Video Editing, Writing, Basic Coding, None (Eager to learn)"
+                  class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please
+                  summarize your skill levels.</span>
+              </div>
+
+              <!-- Contact Fields Row 3 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <!-- Instagram -->
+                <div>
+                  <label for="instagram"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Instagram
+                    Profile (Or LinkedIn) <span class="text-red-500">*</span></label>
+                  <div class="relative flex items-center">
+                    <span class="absolute left-4 text-slate-500 text-sm font-semibold">@</span>
+                    <input type="text" id="instagram" name="Instagram Profile" required placeholder="username"
+                      class="w-full glass-input pl-9 pr-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                  </div>
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please
+                    provide an active social profile handle.</span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div>
+                  <label for="whatsapp"
+                    class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">WhatsApp
+                    Number <span class="text-red-500">*</span></label>
+                  <input type="tel" id="whatsapp" name="WhatsApp Number" required placeholder="+91 9876543210"
+                    class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium" />
+                  <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please enter
+                    a valid WhatsApp contact number.</span>
+                </div>
+
+              </div>
+
+              <!-- Future Goal -->
+              <div>
+                <label for="futuregoal"
+                  class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">What is your
+                  future goal / vision? <span class="text-red-500">*</span></label>
+                <textarea id="futuregoal" name="Future Goal / Vision" required rows="4"
+                  placeholder="Explain your ambitious goals, dreams, and what you aim to build in the next 12-24 months..."
+                  class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-medium resize-none"></textarea>
+                <span class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden mt-1">Please tell us
+                  about your future vision.</span>
+              </div>
+
+              <!-- Checkbox Commitment -->
+              <div class="flex items-start gap-3 select-none">
+                <div class="flex items-center h-5">
+                  <input type="checkbox" id="commitment" name="Commitment Checkbox" required
+                    class="w-4 h-4 rounded border-gray-600 bg-slate-950 text-cyberCyan focus:ring-cyberCyan focus:ring-2 focus:ring-offset-gray-900" />
+                </div>
+                <label for="commitment" class="text-xs font-semibold text-slate-300 leading-tight">
+                  I commit to dedicating 1-2 hours daily to growth, completing tasks diligently, and maintaining
+                  respectful conduct in the community. <span class="text-cyberCyan">*</span>
+                </label>
+              </div>
+              <span id="commitment-error"
+                class="error-msg text-[11px] text-red-400 font-semibold tracking-wide hidden">You must agree to the
+                personal growth commitment.</span>
+
+              <!-- Submit Button -->
+              <button id="form-submit-btn" type="submit"
+                class="w-full py-4 rounded-xl font-heading font-extrabold text-sm tracking-wider uppercase text-brandDark bg-gradient-to-r from-cyberCyan to-cyberPurple hover:opacity-95 shadow-neon-cyan transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2">
+                <span id="submit-btn-text">Apply For Free Access</span>
+                <span id="submit-spinner"
+                  class="hidden w-5 h-5 rounded-full border-2 border-brandDark border-t-transparent animate-spin"></span>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- ====================================
+             AMBASSADOR LOOKUP PANEL (Orange & White Theme)
+             ==================================== -->
+        <div id="lookup-tab-content" class="hidden animate-fade-in space-y-6">
+          <div class="text-center mb-8">
+            <span
+              class="inline-block px-3 py-1 text-[10px] font-black tracking-widest text-brandOrange bg-brandOrange/10 border border-brandOrange/25 rounded-md mb-4 uppercase animate-pulse">
+              Ambassador Portal
+            </span>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-2">
+              Check Your Referral Status
+            </h2>
+            <p class="font-sans text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
+              Enter your registered full name or your unique Ambassador Code (`MISSION-XXXX`) to instantly view your
+              statistics and unlocked rewards.
+            </p>
+          </div>
+
+          <!-- Lookup form/input -->
+          <div
+            class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/[0.06] bg-slate-950/40 space-y-6 max-w-lg mx-auto">
+            <div>
+              <label for="lookup-input"
+                class="block font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-2">Registered
+                Name or Ambassador Code</label>
+              <input type="text" id="lookup-input" placeholder="e.g. John Doe or MISSION-USER123"
+                class="w-full glass-input px-4 py-3 rounded-xl text-slate-100 text-sm font-semibold placeholder:text-slate-600 focus:text-white" />
+              <p id="lookup-error" class="hidden text-[11px] text-brandOrange font-semibold tracking-wide mt-2">No
+                Ambassador found matching this name or code. Please make sure you have applied first.</p>
+            </div>
+
+            <button id="lookup-submit-btn" type="button"
+              class="w-full py-4 rounded-xl font-heading font-extrabold text-sm tracking-wider uppercase text-brandDark bg-gradient-to-r from-brandOrange to-brandOrangeLight hover:shadow-neon-orange transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2">
+              <span>Retrieve Stats</span>
+              <span id="lookup-spinner"
+                class="hidden w-5 h-5 rounded-full border-2 border-brandDark border-t-transparent animate-spin"></span>
+            </button>
+
+
+          </div>
+        </div>
+
+        <!-- ====================================
+             DYNAMIC SUCCESS SCREEN (SPA-style View)
+             ==================================== -->
+        <div id="success-view" class="hidden space-y-10 animate-fade-in">
+
+          <!-- Header Success Info -->
+          <div class="text-center space-y-3">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-neonGreen/10 border-2 border-neonGreen text-neonGreen text-3xl mb-4 animate-bounce">
+              ✓
+            </div>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">🎉 Congratulations!</h2>
+            <p class="font-sans text-sm text-slate-400">Welcome to the inner circle of <span
+                class="text-cyberCyan font-bold">Growth Warrior</span>.</p>
+          </div>
+
+          <!-- Secret Actionable Links Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <!-- Button: Join Community -->
+            <a id="success-community-btn" href="#" target="_blank"
+              class="glass-panel p-5 rounded-2xl border border-white/[0.08] hover:border-neonGreen/30 hover:bg-white/[0.04] transition-all flex items-center gap-4 group">
+              <div
+                class="w-12 h-12 rounded-xl bg-neonGreen/10 flex items-center justify-center text-neonGreen group-hover:scale-105 transition-transform duration-300">
+                <!-- WhatsApp logo look-alike custom SVG -->
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.59 1.97 14.12 1.052 11.998 1.052c-5.44 0-9.866 4.372-9.87 9.802 0 1.696.485 3.36 1.402 4.82L2.73 21.03l6.095-1.597c.008-.005.008-.005 0 0z" />
+                </svg>
+              </div>
+              <div class="text-left">
+                <span class="text-slate-400 font-heading text-[10px] font-bold tracking-widest uppercase block">STEP 1:
+                  ACCESS HUB</span>
+                <span class="text-white font-heading font-bold text-sm">Join Elite Community</span>
+              </div>
+            </a>
+
+            <!-- Button: Download Gift Book -->
+            <a id="success-gift-btn" href="#" target="_blank"
+              class="glass-panel p-5 rounded-2xl border border-white/[0.08] hover:border-cyberCyan/30 hover:bg-white/[0.04] transition-all flex items-center gap-4 group">
+              <div
+                class="w-12 h-12 rounded-xl bg-cyberCyan/10 flex items-center justify-center text-cyberCyan group-hover:scale-105 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div class="text-left">
+                <span class="text-slate-400 font-heading text-[10px] font-bold tracking-widest uppercase block">STEP 2:
+                  CLAIM BOOKLET</span>
+                <span class="text-white font-heading font-bold text-sm">Download Monk Mode</span>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Immediate Action Timeline -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/[0.04]">
+            <h3
+              class="font-heading font-bold text-sm tracking-wider uppercase text-slate-300 mb-6 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-cyberCyan shadow-neon-cyan animate-ping"></span>
+              YOUR IMMEDIATE ACTION STEPS
+            </h3>
+
+            <div class="space-y-6 relative border-l border-white/[0.05] ml-2 pl-6">
+
+              <!-- Item 1 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[30px] top-0 w-4 h-4 rounded-full bg-cyberCyan border-2 border-brandDark shadow-neon-cyan flex items-center justify-center text-[9px] text-brandDark font-black">
+                  1</div>
+                <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-100">Join the Community Workspace</h4>
+                <p class="font-sans text-xs text-slate-400 mt-1 leading-relaxed">Enter our premium chat hub. We run our
+                  announcements and verification channels here.</p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[30px] top-0 w-4 h-4 rounded-full bg-cyberCyan border-2 border-brandDark shadow-neon-cyan flex items-center justify-center text-[9px] text-brandDark font-black">
+                  2</div>
+                <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-100">Download the 21-Day Monk Mode
+                  Challenge Guide</h4>
+                <p class="font-sans text-xs text-slate-400 mt-1 leading-relaxed">Download and read the Focus blueprint.
+                  You'll need this to print your action sheets for Day 1.</p>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[30px] top-0 w-4 h-4 rounded-full bg-cyberPurple border-2 border-brandDark flex items-center justify-center text-[9px] text-white font-black">
+                  3</div>
+                <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-100">Introduce Yourself to Ambitious
+                  Peers</h4>
+                <p class="font-sans text-xs text-slate-400 mt-1 leading-relaxed">Post in the <code
+                    class="text-cyberCyan">#introductions</code> channel inside the hub. Use our provided template to
+                  state your current skills and future goals.</p>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[30px] top-0 w-4 h-4 rounded-full bg-cyberPurple border-2 border-brandDark flex items-center justify-center text-[9px] text-white font-black">
+                  4</div>
+                <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-100">Initiate and Complete Day 1 Task
+                </h4>
+                <p class="font-sans text-xs text-slate-400 mt-1 leading-relaxed">Establish your rules, set your focus
+                  hours, and log your initial completion. The race starts tonight!</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ====================================
+               DYNAMIC REFERRAL SYSTEM DASHBOARD
+               ==================================== -->
+          <div
+            class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/[0.06] bg-gradient-to-b from-white/[0.01] to-brandDark/50 space-y-8 relative">
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <span
+                  class="inline-block px-2.5 py-1 rounded text-[9px] font-black tracking-widest text-cyberPurple bg-cyberPurple/10 border border-cyberPurple/25 uppercase">
+                  Growth Accelerator
+                </span>
+                <h3 class="font-heading font-extrabold text-xl text-white mt-1">Ambassador Referral System</h3>
+              </div>
+
+              <!-- Referral Code Chip -->
+              <div class="glass-panel px-3 py-1.5 rounded-lg border border-white/[0.08] flex items-center gap-2">
+                <span class="text-[9px] font-black tracking-wider text-slate-400 uppercase">Your Code:</span>
+                <span id="referral-code-badge"
+                  class="font-heading font-black text-xs text-cyberCyan uppercase tracking-widest">MISSION-NEO284</span>
+              </div>
+            </div>
+
+            <!-- Referral Link Share Widget -->
+            <div class="space-y-2">
+              <label class="block font-heading font-bold text-xs tracking-wider uppercase text-slate-400">Share Your
+                Custom Recruitment Link</label>
+
+              <div class="relative flex items-center">
+                <input type="text" id="referral-link-input" readonly
+                  value="https://missionbillionaire.com/?ref=MISSION-NEO284"
+                  class="w-full glass-input pl-4 pr-24 py-3 rounded-xl text-xs sm:text-sm text-slate-300 font-semibold cursor-default" />
+
+                <button id="copy-ref-btn" type="button"
+                  class="absolute right-2 px-4 py-1.5 rounded-lg bg-cyberCyan/10 hover:bg-cyberCyan/20 border border-cyberCyan/35 text-cyberCyan hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all select-none">
+                  Copy Link
+                </button>
+
+                <!-- Tooltip Feedback -->
+                <div id="copy-tooltip"
+                  class="absolute bottom-14 right-2 px-3 py-1.5 rounded-md bg-slate-900 border border-cyberCyan/50 text-[10px] font-bold text-cyberCyan uppercase tracking-wider hidden transition-opacity duration-300">
+                  Link Copied!
+                </div>
+              </div>
+            </div>
+
+            <!-- Referrals Progress tracker -->
+            <div class="space-y-4">
+
+              <div class="flex justify-between items-end">
+                <div>
+                  <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block">CURRENT
+                    STATS</span>
+                  <span class="font-heading font-black text-2xl text-white"><span id="ref-completed-count">0</span> / 20
+                    <span class="text-xs text-slate-400 font-semibold font-sans">Friends Referred</span></span>
+                </div>
+                <span id="ref-progress-percent" class="font-heading font-black text-sm text-cyberCyan">0%
+                  Complete</span>
+              </div>
+
+              <!-- Bar -->
+              <div class="w-full bg-slate-950 rounded-full h-3.5 overflow-hidden border border-white/[0.05] p-0.5">
+                <div id="ref-progress-bar"
+                  class="bg-gradient-to-r from-cyberCyan via-indigo-500 to-cyberPurple h-full rounded-full transition-all duration-500"
+                  style="width: 0%;"></div>
+              </div>
+
+              <!-- Referred Friends Names List (Premium Addition) -->
+              <div id="referred-names-container"
+                class="hidden mt-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] shadow-inner">
+                <span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest block mb-2">REFERRED
+                  FRIENDS</span>
+                <div id="referred-names-list" class="flex flex-wrap gap-2 text-[11px] text-slate-300 font-semibold">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Unlockable Rewards Grid -->
+            <div class="space-y-4">
+              <h4 class="font-heading font-bold text-xs tracking-wider uppercase text-slate-300">UNLOCKED REWARDS
+                PIPELINE</h4>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <!-- Tier 1 -->
+                <div id="reward-card-5"
+                  class="glass-panel p-4 rounded-xl border border-white/[0.03] transition-all opacity-55 relative group">
+                  <!-- Lock Indicator -->
+                  <div
+                    class="absolute top-4 right-4 flex items-center justify-center w-6 h-6 rounded-full bg-white/[0.03] border border-white/[0.08] text-slate-400 text-[11px] reward-status-indicator">
+                    🔒
+                  </div>
+                  <span
+                    class="text-[9px] font-extrabold text-slate-500 tracking-wider uppercase block reward-badge-count">REFER
+                    5 FRIENDS</span>
+                  <h5
+                    class="font-heading font-bold text-xs sm:text-sm text-white mt-0.5 group-hover:text-cyberCyan transition-colors">
+                    Advanced Personality Development</h5>
+                  <p class="font-sans text-[10px] text-slate-500 mt-1 leading-relaxed">Elite behavioral engineering
+                    blueprint to reconstruct daily confidence and body carriage.</p>
+                </div>
+
+                <!-- Tier 2 -->
+                <div id="reward-card-10"
+                  class="glass-panel p-4 rounded-xl border border-white/[0.03] transition-all opacity-55 relative group">
+                  <div
+                    class="absolute top-4 right-4 flex items-center justify-center w-6 h-6 rounded-full bg-white/[0.03] border border-white/[0.08] text-slate-400 text-[11px] reward-status-indicator">
+                    🔒
+                  </div>
+                  <span
+                    class="text-[9px] font-extrabold text-slate-500 tracking-wider uppercase block reward-badge-count">REFER
+                    10 FRIENDS</span>
+                  <h5
+                    class="font-heading font-bold text-xs sm:text-sm text-white mt-0.5 group-hover:text-cyberCyan transition-colors">
+                    Public Speaking Masterclass</h5>
+                  <p class="font-sans text-[10px] text-slate-500 mt-1 leading-relaxed">Full rhetoric execution training:
+                    vocal power, storytelling, and managing stage performance.</p>
+                </div>
+
+                <!-- Tier 3 -->
+                <div id="reward-card-15"
+                  class="glass-panel p-4 rounded-xl border border-white/[0.03] transition-all opacity-55 relative group">
+                  <div
+                    class="absolute top-4 right-4 flex items-center justify-center w-6 h-6 rounded-full bg-white/[0.03] border border-white/[0.08] text-slate-400 text-[11px] reward-status-indicator">
+                    🔒
+                  </div>
+                  <span
+                    class="text-[9px] font-extrabold text-slate-500 tracking-wider uppercase block reward-badge-count">REFER
+                    15 FRIENDS</span>
+                  <h5
+                    class="font-heading font-bold text-xs sm:text-sm text-white mt-0.5 group-hover:text-cyberCyan transition-colors">
+                    Confidence Building Framework</h5>
+                  <p class="font-sans text-[10px] text-slate-500 mt-1 leading-relaxed">Structured psychological
+                    reframing drills to tackle public social anxiety and fear of failure.</p>
+                </div>
+
+                <!-- Tier 4 -->
+                <div id="reward-card-20"
+                  class="glass-panel p-4 rounded-xl border border-white/[0.03] transition-all opacity-55 relative group">
+                  <div
+                    class="absolute top-4 right-4 flex items-center justify-center w-6 h-6 rounded-full bg-white/[0.03] border border-white/[0.08] text-slate-400 text-[11px] reward-status-indicator">
+                    🔒
+                  </div>
+                  <span
+                    class="text-[9px] font-extrabold text-slate-500 tracking-wider uppercase block reward-badge-count">REFER
+                    20 FRIENDS</span>
+                  <h5
+                    class="font-heading font-bold text-xs sm:text-sm text-white mt-0.5 group-hover:text-cyberCyan transition-colors">
+                    Leadership &amp; Team Blueprint</h5>
+                  <p class="font-sans text-[10px] text-slate-500 mt-1 leading-relaxed">Complete guide to recruiting
+                    high-quality players, structuring workflows, and delegating scale.</p>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <!-- Return to Application / Logout Portal button -->
+          <div class="text-center pt-4 select-none">
+            <button id="logout-portal-btn" type="button"
+              class="text-xs font-bold text-slate-500 hover:text-brandOrange uppercase tracking-wider transition-colors focus:outline-none">
+              ← Return to Portal Page / Sign Out
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </div>
+  </div>
+  </section>
+
+  <!-- ====================================
+       TESTIMONIALS SECTION
+       ==================================== -->
+  <section id="testimonials" class="relative py-20 z-10 bg-brandDark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white mb-4">
+          Uncensored Student Reviews
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyberCyan to-cyberPurple mx-auto mb-6 rounded-full"></div>
+        <p class="font-sans text-base sm:text-lg text-slate-400">
+          Here is what ambitious student builders, content creators, and freelancers say about our system.
+        </p>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Review 1 -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] flex flex-col justify-between hover:border-cyberCyan/20 transition-colors duration-300">
+          <div class="space-y-4">
+
+            <!-- Rating Star -->
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+
+            <p class="font-sans text-sm text-slate-300 italic leading-relaxed">
+              "Before joining, I spent my college evenings endlessly scrolling reels. Since joining Cohort 3 and
+              committing to my accountability partner, I built my first web app and locked my initial freelance contract
+              of ₹45,000. Unbelievable community!"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/[0.04]">
+            <img class="w-10 h-10 rounded-full object-cover border border-white/[0.08]"
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=120"
+              alt="Avatar Rohan Gupta" />
+            <div>
+              <h4 class="font-heading font-bold text-xs sm:text-sm text-white">Rohan Gupta</h4>
+              <p class="font-sans text-[10px] text-cyberCyan font-medium uppercase tracking-wider">Cohort 3 Student
+                Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] flex flex-col justify-between hover:border-cyberPurple/20 transition-colors duration-300">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <p class="font-sans text-sm text-slate-300 italic leading-relaxed">
+              "The 21-Day Monk Mode Challenge booklet alone is easily worth ₹3,000+. The focus blueprints completely
+              reformatted my daily schedules. The daily accountability trackers are brutal but highly necessary to
+              execute."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/[0.04]">
+            <img class="w-10 h-10 rounded-full object-cover border border-white/[0.08]"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120"
+              alt="Avatar Sneha Sharma" />
+            <div>
+              <h4 class="font-heading font-bold text-xs sm:text-sm text-white">Sneha Sharma</h4>
+              <p class="font-sans text-[10px] text-cyberPurple font-medium uppercase tracking-wider">Freelance Video
+                Editor</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div
+          class="glass-panel p-8 rounded-2xl border border-white/[0.04] flex flex-col justify-between hover:border-cyberCyan/20 transition-colors duration-300">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <p class="font-sans text-sm text-slate-300 italic leading-relaxed">
+              "Most online courses are full of generic fluff, but Growth Warrior is pure building. We discuss cold
+              emailing scripts, Notion productivity configurations, and pricing models. Referral unlocks are
+              exceptionally premium too!"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/[0.04]">
+            <img class="w-10 h-10 rounded-full object-cover border border-white/[0.08]"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120"
+              alt="Avatar Aditya Verma" />
+            <div>
+              <h4 class="font-heading font-bold text-xs sm:text-sm text-white">Aditya Verma</h4>
+              <p class="font-sans text-[10px] text-cyberCyan font-medium uppercase tracking-wider">Aspiring Creator
+                &amp; Designer</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       FAQ ACCORDION SECTION
+       ==================================== -->
+  <section id="faq" class="relative py-20 z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white mb-4">
+          Frequently Answered Queries
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyberCyan to-cyberPurple mx-auto mb-6 rounded-full"></div>
+        <p class="font-sans text-base sm:text-lg text-slate-400">
+          Everything you need to know about the community, curriculum, and admissions.
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4">
+
+        <!-- Accordion Item 1 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">What is Growth Warrior?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              Growth Warrior is a private growth-focused community designed for ambitious students, future
+              founders, freelancers, and aspiring creators. We focus on building discipline, high-income skills, startup
+              networks, and financial independence through action-based learning and daily verification.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">Who can join the community?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              Any student, freelancer, or builder between 14-30 years of age who is committed to continuous growth,
+              personal excellence, and real-world execution. No prior coding or design skills are mandatory, but high
+              commitment is required.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">Is it completely free?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              Yes, currently applications are free for the first 100 accepted students. However, we have a strict
+              vetting pipeline to ensure only serious executors who are dedicated to mutual growth join the workspace.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">How does daily accountability
+              work?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              Each member is assigned a peer cohort and a team partner. You submit your primary tasks in the morning and
+              verify completions with proof in the evening. Consistent slacking results in warnings and eventual
+              suspension to keep the standard high.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">What high-income capabilities will I
+              learn?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              We provide framework checklists and structured guide databases on modern skills: visual identity design,
+              freelance agency operations, copy writing, landing page building, modern automation tools, sales cold
+              outreach, and startup models.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 6 -->
+        <div class="glass-panel rounded-2xl border border-white/[0.04] overflow-hidden transition-all duration-300">
+          <button type="button"
+            class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="font-heading font-bold text-sm sm:text-base text-white">How does the Referral System
+              work?</span>
+            <span class="faq-icon text-slate-400 transition-transform duration-300 font-extrabold text-lg">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="font-sans text-xs sm:text-sm text-slate-400 pb-5 leading-relaxed">
+              Upon successful form application, the system generates a unique Ambassador code for you. You get a
+              personalized sharing URL. When peers use your link to apply, your ambassador score goes up, unlocking
+              advanced training courses (Personality Development, Rhetoric Speaking, Psychological Confidence
+              frameworks) at 5, 10, 15, and 20 referrals!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================
+       FOOTER SECTION
+       ==================================== -->
+  <footer class="relative z-10 border-t border-white/[0.05] bg-slate-950 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+
+        <!-- Logo & Tagline (4 Columns) -->
+        <div class="md:col-span-5 space-y-6">
+          <a href="#" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyberCyan to-cyberPurple flex items-center justify-center text-brandDark font-heading font-black text-lg">
+              GW
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-heading font-extrabold text-lg tracking-wider text-slate-50 uppercase leading-none">GROWTH</span>
+              <span
+                class="font-heading font-semibold text-xs tracking-widest text-cyberCyan uppercase mt-0.5 leading-none">WARRIOR</span>
+            </div>
+          </a>
+
+          <p class="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Bridging the massive gap between academic theory and absolute real-world execution. Build elite discipline,
+            network with high-performers, and gain true financial literacy.
+          </p>
+
+          <!-- Socials Link -->
+          <div class="flex items-center gap-4">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/buildwithprakash7#/" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] hover:border-cyberCyan/40 flex items-center justify-center text-slate-400 hover:text-cyberCyan transition-colors"
+              aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@buildwithprakash7" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] hover:border-cyberCyan/40 flex items-center justify-center text-slate-400 hover:text-cyberCyan transition-colors"
+              aria-label="YouTube">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/prakash-kumar-0a282b36a/" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] hover:border-cyberCyan/40 flex items-center justify-center text-slate-400 hover:text-cyberCyan transition-colors"
+              aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Quick Links (3 Columns) -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="font-heading font-extrabold text-xs uppercase tracking-wider text-slate-100">COMMUNITY</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="#mission" class="hover:text-cyberCyan transition-colors">Our Mission</a></li>
+            <li><a href="#gift" class="hover:text-cyberCyan transition-colors">Free Challenge Booklet</a></li>
+            <li><a href="#benefits" class="hover:text-cyberCyan transition-colors">Workspace Benefits</a></li>
+            <li><a href="#apply" class="hover:text-cyberCyan transition-colors">Apply For Entrance</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info (4 Columns) -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-heading font-extrabold text-xs uppercase tracking-wider text-slate-100">CONTACT &amp;
+            INQUIRIES</h4>
+          <p class="font-sans text-xs sm:text-sm text-slate-400">
+            Have questions regarding applications or partnerships? Get in touch:
+          </p>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-400">
+            <p>📧 Email: <a href="mailto:prakashcodex@gmail.com"
+                class="text-cyberCyan hover:underline font-semibold">admission@missionbillionaire.com</a></p>
+            <p>💬 Support: <a href="#faq" class="text-cyberCyan hover:underline font-semibold">Read FAQ Accordion</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom (Copyright and Legal) -->
+      <div
+        class="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-semibold text-slate-500 uppercase tracking-widest">
+        <div>
+          © 2026 GROWTH WARRIOR. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-cyberCyan transition-colors">PRIVACY POLICY</a>
+          <a href="#" class="hover:text-cyberCyan transition-colors">TERMS OF SERVICE</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================
+       INTERACTIVE CLIENT-SIDE JAVASCRIPT
+       ==================================== -->
+  <script type="text/javascript">
+
+    // ====================================
+    // PRELOADER & NAVIGATION SCROLL
+    // ====================================
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('preloader');
+      setTimeout(() => {
+        loader.classList.add('opacity-0');
+        setTimeout(() => loader.style.display = 'none', 500);
+      }, 800); // 800ms natural delay for premium feel
+    });
+
+    // Sticky Nav shadow on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 20) {
+        header.classList.add('bg-brandDark/95', 'shadow-2xl');
+      } else {
+        header.classList.remove('bg-brandDark/95', 'shadow-2xl');
+      }
+    });
+
+    // Mobile Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconPath = document.getElementById('menu-icon-path');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        // Standard Hamburger Icon
+        menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      } else {
+        // Close 'X' Icon
+        menuIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      }
+    });
+
+    // Close mobile menu on click inside
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      });
+    });
+
+
+    // ====================================
+    // STATS COUNT-UP NUMBERS ANIMATION
+    // ====================================
+    const statsSection = document.getElementById('stats-counter-panel');
+    const counters = document.querySelectorAll('.counter-number');
+    let countersAnimated = false;
+
+    const runCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / 80; // Speed factor
+
+        let current = 0;
+        const updateNumber = () => {
+          current += increment;
+          if (current < target) {
+            counter.innerText = Math.ceil(current);
+            setTimeout(updateNumber, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateNumber();
+      });
+    };
+
+    // Trigger on scroll visibility
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          runCounters();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+
+
+    // ====================================
+    // SCARCITY SEAT COUNTER & COUNTDOWN
+    // ====================================
+    const seatsLeftText = document.getElementById('seats-left');
+    const seatsProgressBar = document.getElementById('seats-progress');
+
+    // Simulate active seats depletion slightly
+    let currentSeats = 12;
+    const depleteSeats = () => {
+      if (currentSeats > 4) {
+        currentSeats -= Math.floor(Math.random() * 2);
+        if (seatsLeftText) seatsLeftText.innerText = currentSeats;
+        if (seatsProgressBar) seatsProgressBar.style.width = currentSeats + '%';
+      }
+      // Re-trigger periodically between 20s to 45s
+      setTimeout(depleteSeats, 20000 + Math.random() * 25000);
+    };
+    setTimeout(depleteSeats, 12000);
+
+    // Dynamic 24H Countdown timer (Stored in LocalStorage to remain evergreen)
+    const initCountdown = () => {
+      let expiryTime = localStorage.getItem('mb_countdown_expiry');
+      const now = new Date().getTime();
+
+      // If not present or already expired, set new expiry time to 23 hours 59 minutes from now
+      if (!expiryTime || now > parseInt(expiryTime)) {
+        const duration = 23 * 60 * 60 * 1000 + 59 * 60 * 1000 + 59 * 1000;
+        expiryTime = now + duration;
+        localStorage.setItem('mb_countdown_expiry', expiryTime);
+      }
+
+      const hourBox = document.getElementById('hour-box');
+      const minuteBox = document.getElementById('minute-box');
+      const secondBox = document.getElementById('second-box');
+
+      const updateClock = () => {
+        const currentNow = new Date().getTime();
+        const difference = parseInt(expiryTime) - currentNow;
+
+        if (difference <= 0) {
+          // If expired, reset to another 24 hours
+          localStorage.removeItem('mb_countdown_expiry');
+          initCountdown();
+          return;
+        }
+
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        if (hourBox) hourBox.innerText = String(hours).padStart(2, '0');
+        if (minuteBox) minuteBox.innerText = String(minutes).padStart(2, '0');
+        if (secondBox) secondBox.innerText = String(seconds).padStart(2, '0');
+      };
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    };
+
+    initCountdown();
+
+
+    // ====================================
+    // FAQ ACCORDION TRANSITIONS
+    // ====================================
+    const faqButtons = document.querySelectorAll('.faq-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const item = btn.parentElement;
+
+        // Toggle active look
+        item.classList.toggle('border-cyberCyan/20');
+
+        // Expand/Collapse height smoothly
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+          content.style.maxHeight = '0px';
+          icon.style.transform = 'rotate(0deg)';
+          icon.innerText = '+';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+          icon.innerText = '×';
+        }
+
+        // Close other panels
+        faqButtons.forEach(otherBtn => {
+          if (otherBtn !== btn) {
+            const otherContent = otherBtn.nextElementSibling;
+            const otherIcon = otherBtn.querySelector('.faq-icon');
+            const otherItem = otherBtn.parentElement;
+
+            otherItem.classList.remove('border-cyberCyan/20');
+            otherContent.style.maxHeight = '0px';
+            otherIcon.style.transform = 'rotate(0deg)';
+            otherIcon.innerText = '+';
+          }
+        });
+      });
+    });
+
+
+    // ====================================
+    // FORM VALIDATION & AJAX NETLIFY SUBMIT
+    // ====================================
+    const applicationForm = document.getElementById('mb-netlify-form');
+    const formSubmitBtn = document.getElementById('form-submit-btn');
+    const submitBtnText = document.getElementById('submit-btn-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+
+    const applicationContainer = document.getElementById('application-container');
+    const formView = document.getElementById('form-view');
+    const successView = document.getElementById('success-view');
+
+    // Input elements for validator check
+    const inputsToCheck = [
+      { id: 'fullname', type: 'text' },
+      { id: 'age', type: 'age' },
+      { id: 'profession', type: 'select' },
+      { id: 'state', type: 'text' },
+      { id: 'skills', type: 'text' },
+      { id: 'instagram', type: 'text' },
+      { id: 'whatsapp', type: 'tel' },
+      { id: 'futuregoal', type: 'text' }
+    ];
+
+    const validateInput = (el, type) => {
+      const parent = el.closest('div');
+      const errorMsg = parent.querySelector('.error-msg');
+      let isValid = true;
+
+      if (type === 'text') {
+        isValid = el.value.trim().length > 0;
+      } else if (type === 'age') {
+        const val = parseInt(el.value);
+        isValid = !isNaN(val) && val >= 14 && val <= 99;
+      } else if (type === 'select') {
+        isValid = el.value !== '';
+      } else if (type === 'tel') {
+        isValid = el.value.trim().length >= 8;
+      }
+
+      if (isValid) {
+        el.classList.remove('border-red-500');
+        if (errorMsg) errorMsg.classList.add('hidden');
+      } else {
+        el.classList.add('border-red-500');
+        if (errorMsg) errorMsg.classList.remove('hidden');
+      }
+      return isValid;
+    };
+
+    // Attach real-time validation listeners
+    inputsToCheck.forEach(item => {
+      const el = document.getElementById(item.id);
+      if (el) {
+        el.addEventListener('input', () => validateInput(el, item.type));
+        if (item.type === 'select') {
+          el.addEventListener('change', () => validateInput(el, item.type));
+        }
+      }
+    });
+
+    // Form submission event
+    applicationForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      let isFormValid = true;
+
+      // Perform full validation check
+      inputsToCheck.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (el) {
+          const check = validateInput(el, item.type);
+          if (!check) isFormValid = false;
+        }
+      });
+
+      // Check commitment box
+      const commitBox = document.getElementById('commitment');
+      const commitError = document.getElementById('commitment-error');
+      if (!commitBox.checked) {
+        commitError.classList.remove('hidden');
+        isFormValid = false;
+      } else {
+        commitError.classList.add('hidden');
+      }
+
+      if (!isFormValid) {
+        // Scroll to form-view first error smoothly
+        const firstError = applicationForm.querySelector('.border-red-500');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      // Enter loading state
+      formSubmitBtn.disabled = true;
+      submitBtnText.innerText = "Applying for Free Access...";
+      submitSpinner.classList.remove('hidden');
+
+      // Populate hidden referrer fields before serializing
+      const incomingRef = localStorage.getItem('mb_incoming_referrer') || '';
+      document.getElementById('referrer-code').value = incomingRef;
+
+      let referrerName = '';
+      if (incomingRef.startsWith('MISSION-')) {
+        const rawLetters = incomingRef.replace('MISSION-', '').replace(/[0-9]/g, '');
+        referrerName = rawLetters ? rawLetters.charAt(0) + rawLetters.slice(1).toLowerCase() : 'Ambassador';
+      }
+      document.getElementById('referrer-name').value = referrerName;
+
+      // Prep urlencoded form body
+      const formData = new FormData(applicationForm);
+      const urlEncodedBody = new URLSearchParams(formData).toString();
+
+      try {
+        // Submit using AJAX directly to Netlify Forms
+        const netlifyResponse = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: urlEncodedBody
+        });
+
+        if (!netlifyResponse.ok) {
+          console.error("Netlify submit error:", netlifyResponse.statusText);
+        }
+
+        // Generate unique referral system parameters
+        const userName = document.getElementById('fullname').value.trim();
+        setupReferralSystem(userName);
+
+        // Register the new user in the global database and update the referrer
+        const incomingRefCode = localStorage.getItem('mb_incoming_referrer') || '';
+        await dbRegisterUser(userName, customRefCode, incomingRefCode);
+
+        // Fetch secure invite and gift links from Netlify Function
+        let communityLink = "https://chat.whatsapp.com/Fvle1AqA2IuFMrRCN89IA2";
+        let giftLink = "https://drive.google.com/drive/folders/109vVuWoOWRovIJgkgN_C1LP9TPI2sxVA?usp=sharing";
+
+        try {
+          const linksResponse = await fetch('/api/get-links');
+          if (linksResponse.ok) {
+            const data = await linksResponse.json();
+            if (data.success) {
+              communityLink = data.communityLink;
+              giftLink = data.giftLink;
+            }
+          }
+        } catch (apiErr) {
+          console.warn("Could not retrieve links from serverless API, using fallback defaults:", apiErr);
+        }
+
+        // Set action button target links
+        document.getElementById('success-community-btn').href = communityLink;
+        document.getElementById('success-gift-btn').href = giftLink;
+
+        // Visual SPA Screen Transition
+        formView.classList.add('opacity-0');
+        setTimeout(() => {
+          formView.style.display = 'none';
+          successView.style.display = 'block';
+          successView.classList.add('opacity-100');
+
+          // Trigger Confetti Explosion
+          triggerSuccessConfetti();
+
+          // Scroll success panel to center
+          applicationContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+
+      } catch (err) {
+        console.error("Form submit system crash:", err);
+        alert("A system error occurred. Please check your connections and re-submit.");
+      } finally {
+        formSubmitBtn.disabled = false;
+        submitBtnText.innerText = "Apply For Free Access";
+        submitSpinner.classList.add('hidden');
+      }
+    });
+
+    // Premium Confetti Burst
+    const triggerSuccessConfetti = () => {
+      if (typeof confetti === 'function') {
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+
+        const randomInRange = (min, max) => Math.random() * (max - min) + min;
+
+        const interval = setInterval(function () {
+          const timeLeft = animationEnd - Date.now();
+
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+
+          const particleCount = 50 * (timeLeft / duration);
+          // since particles fall down, animate a bit higher than random
+          confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+          confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+        }, 250);
+      }
+    };
+
+    // ====================================
+    // CLIENT-SIDE SERVERLESS DATABASE (No-Backend)
+    // ====================================
+    const DB_APP_KEY = "n1i85ivn";
+
+    // URL-safe Base64 encoder
+    const safeBtoa = (str) => {
+      return btoa(unescape(encodeURIComponent(str)))
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '');
+    };
+
+    // URL-safe Base64 decoder
+    const safeAtob = (str) => {
+      let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+      while (base64.length % 4) {
+        base64 += '=';
+      }
+      return decodeURIComponent(escape(atob(base64)));
+    };
+
+    // Get value from key-value store
+    const dbGet = async (key) => {
+      try {
+        const response = await fetch(`https://keyvalue.immanuel.co/api/KeyVal/GetValue/${DB_APP_KEY}/${key}`);
+        if (!response.ok) return null;
+        const encodedText = await response.json(); // API returns string wrapped in quotes
+        if (!encodedText || encodedText === "null" || encodedText.error) return null;
+        return safeAtob(encodedText);
+      } catch (err) {
+        console.error(`Database read error for key ${key}:`, err);
+        return null;
+      }
+    };
+
+    // Set value in key-value store
+    const dbSet = async (key, val) => {
+      try {
+        const encodedVal = safeBtoa(val);
+        const url = `https://keyvalue.immanuel.co/api/KeyVal/UpdateValue/${DB_APP_KEY}/${key}/${encodedVal}`;
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Length': '0' }
+        });
+        return response.ok;
+      } catch (err) {
+        console.error(`Database write error for key ${key}:`, err);
+        return false;
+      }
+    };
+
+    // Lookup Ambassador stats and dynamic list of referred friends
+    const dbLookupAmbassador = async (query) => {
+      const searchVal = query.trim().toUpperCase();
+      if (!searchVal) return null;
+
+      // 1. Try fetching by exact code directly e.g. code_MISSION-NEO284
+      let rawData = await dbGet(`code_${searchVal}`);
+      let code = searchVal;
+
+      // 2. If not found, check if it's registered under a name e.g. name_PRAKASH
+      if (!rawData) {
+        const resolvedCode = await dbGet(`name_${searchVal}`);
+        if (resolvedCode) {
+          code = resolvedCode.toUpperCase();
+          rawData = await dbGet(`code_${code}`);
+        }
+      }
+
+      if (!rawData) return null;
+
+      try {
+        const meta = JSON.parse(rawData);
+        const count = meta.count || 0;
+        const name = meta.name;
+
+        // Fetch referred friends names in parallel
+        const referralPromises = [];
+        for (let i = 1; i <= count; i++) {
+          referralPromises.push(dbGet(`ref_${code}_${i}`));
+        }
+
+        const referrals = (await Promise.all(referralPromises)).filter(Boolean);
+
+        return {
+          success: true,
+          found: true,
+          code,
+          name,
+          count,
+          referrals
+        };
+      } catch (err) {
+        console.error("Failed to parse ambassador database metadata:", err);
+        return null;
+      }
+    };
+
+    // Register User & Process Referral linkage
+    const dbRegisterUser = async (name, code, referrerCode) => {
+      try {
+        const normalizedCode = code.trim().toUpperCase();
+        const normalizedReferrerCode = (referrerCode || "").trim().toUpperCase();
+        const normalizedName = name.trim().toUpperCase();
+
+        // 1. Create registered user metadata entry
+        const userMeta = {
+          name: name.trim(),
+          code: normalizedCode,
+          count: 0
+        };
+
+        const successMeta = await dbSet(`code_${normalizedCode}`, JSON.stringify(userMeta));
+        const successNameMap = await dbSet(`name_${normalizedName}`, normalizedCode);
+
+        // Also map name without spaces (to make lookup easier)
+        const simplifiedName = normalizedName.replace(/\s+/g, '');
+        if (simplifiedName !== normalizedName) {
+          await dbSet(`name_${simplifiedName}`, normalizedCode);
+        }
+
+        console.log(`Registered user in keyvalue database: metadata=${successMeta}, mapping=${successNameMap}`);
+
+        // 2. Process referral link if referrerCode exists
+        if (normalizedReferrerCode && normalizedReferrerCode !== normalizedCode) {
+          // Resolve referrer code if it maps to a name
+          let finalReferrerCode = normalizedReferrerCode;
+          let rawReferrerMeta = await dbGet(`code_${finalReferrerCode}`);
+
+          if (!rawReferrerMeta) {
+            // Check if the referrerCode was a name lookup instead
+            const resolvedReferrerCode = await dbGet(`name_${finalReferrerCode}`);
+            if (resolvedReferrerCode) {
+              finalReferrerCode = resolvedReferrerCode.toUpperCase();
+              rawReferrerMeta = await dbGet(`code_${finalReferrerCode}`);
+            }
+          }
+
+          let referrerMeta;
+          if (rawReferrerMeta) {
+            referrerMeta = JSON.parse(rawReferrerMeta);
+          } else {
+            // Self-healing: dynamically create referrer if they exist only as code
+            const rawLetters = finalReferrerCode.replace("MISSION-", "").replace(/[0-9]/g, "");
+            const formattedName = rawLetters ? rawLetters.charAt(0) + rawLetters.slice(1).toLowerCase() : "Ambassador";
+            referrerMeta = {
+              name: formattedName,
+              code: finalReferrerCode,
+              count: 0
+            };
+          }
+
+          // Fetch all existing referred friends to check for duplicates
+          const referralPromises = [];
+          for (let i = 1; i <= referrerMeta.count; i++) {
+            referralPromises.push(dbGet(`ref_${finalReferrerCode}_${i}`));
+          }
+          const existingReferrals = (await Promise.all(referralPromises)).filter(Boolean);
+
+          const alreadyReferred = existingReferrals.some(refName => refName.toUpperCase() === name.trim().toUpperCase());
+
+          if (!alreadyReferred) {
+            referrerMeta.count += 1;
+            const newCount = referrerMeta.count;
+
+            // Save updated metadata & append new friend name key
+            await dbSet(`code_${finalReferrerCode}`, JSON.stringify(referrerMeta));
+            await dbSet(`ref_${finalReferrerCode}_${newCount}`, name.trim());
+            console.log(`Incremented referral count for referrer ${finalReferrerCode} to ${newCount}`);
+          }
+        }
+        return true;
+      } catch (err) {
+        console.error("Error during database registration & referral linkage:", err);
+        return false;
+      }
+    };
+
+
+    // ====================================
+    // REFERRAL DYNAMIC SYSTEM ENGINE
+    // ====================================
+    let refCount = 0;
+    let customRefCode = "";
+    let referredFriendsList = [];
+
+    const setupReferralSystem = (name) => {
+      // Create readable code e.g. MISSION-ROHAN532
+      const letters = name.replace(/[^a-zA-Z]/g, '').toUpperCase().slice(0, 5);
+      const randNum = Math.floor(100 + Math.random() * 900);
+      customRefCode = `MISSION-${letters || 'USER'}${randNum}`;
+
+      const origin = window.location.origin || "https://missionbillionaire.netlify.app";
+      const referralLink = `${origin}/?ref=${customRefCode}`;
+
+      // Update Dashboard viewports
+      document.getElementById('referral-code-badge').innerText = customRefCode;
+      document.getElementById('referral-link-input').value = referralLink;
+
+      // Save user credentials locally
+      localStorage.setItem('mb_user_fullname', name);
+      localStorage.setItem('mb_user_ref_code', customRefCode);
+      localStorage.setItem('mb_user_ref_count', '0');
+
+      refCount = 0;
+      referredFriendsList = [];
+      updateReferralDashboard();
+    };
+
+    const updateReferralDashboard = () => {
+      // Update counts & percentages
+      document.getElementById('ref-completed-count').innerText = refCount;
+      const progressPercent = Math.min((refCount / 20) * 100, 100);
+      document.getElementById('ref-progress-percent').innerText = `${Math.round(progressPercent)}% Complete`;
+      document.getElementById('ref-progress-bar').style.width = `${progressPercent}%`;
+
+      // Update referred names list (Premium dynamic display)
+      const namesContainer = document.getElementById('referred-names-container');
+      const namesList = document.getElementById('referred-names-list');
+
+      if (namesList && namesContainer) {
+        if (referredFriendsList && referredFriendsList.length > 0) {
+          namesContainer.classList.remove('hidden');
+          namesList.innerHTML = referredFriendsList.map(name =>
+            `<span class="px-2.5 py-1 rounded-xl bg-brandOrange/10 border border-brandOrange/30 text-brandOrange font-heading text-[10px] uppercase font-bold tracking-wider">${name}</span>`
+          ).join('');
+        } else {
+          namesContainer.classList.add('hidden');
+          namesList.innerHTML = '';
+        }
+      }
+
+      // Update lock cards status
+      const thresholds = [5, 10, 15, 20];
+      thresholds.forEach(val => {
+        const card = document.getElementById(`reward-card-${val}`);
+        const indicator = card.querySelector('.reward-status-indicator');
+
+        if (refCount >= val) {
+          card.classList.remove('opacity-55');
+          card.classList.add('border-cyberCyan/50', 'shadow-neon-cyan');
+          indicator.innerText = '🔓';
+          indicator.classList.remove('bg-white/[0.03]');
+          indicator.classList.add('bg-cyberCyan/10', 'text-cyberCyan');
+        } else {
+          card.classList.add('opacity-55');
+          card.classList.remove('border-cyberCyan/50', 'shadow-neon-cyan');
+          indicator.innerText = '🔒';
+          indicator.classList.remove('bg-cyberCyan/10', 'text-cyberCyan');
+          indicator.classList.add('bg-white/[0.03]');
+        }
+      });
+    };
+
+
+
+    // Copy Referral Link Clipboard trigger
+    const copyBtn = document.getElementById('copy-ref-btn');
+    const copyLinkInput = document.getElementById('referral-link-input');
+    const copyTooltip = document.getElementById('copy-tooltip');
+
+    copyBtn.addEventListener('click', () => {
+      copyLinkInput.select();
+      copyLinkInput.setSelectionRange(0, 99999); // For mobile devices
+
+      navigator.clipboard.writeText(copyLinkInput.value).then(() => {
+        // Show tooltip feedback
+        copyTooltip.classList.remove('hidden');
+        copyTooltip.style.opacity = '1';
+
+        setTimeout(() => {
+          copyTooltip.style.opacity = '0';
+          setTimeout(() => copyTooltip.classList.add('hidden'), 300);
+        }, 1500);
+      }).catch(err => {
+        console.error("Copy failed:", err);
+      });
+    });
+
+    // On page load, register ref code click tracking in LocalStorage
+    const parseUrlReferral = () => {
+      const params = new URLSearchParams(window.location.search);
+      const incomingRef = params.get('ref');
+
+      if (incomingRef) {
+        localStorage.setItem('mb_incoming_referrer', incomingRef);
+        console.log(`Registered incoming referral code: ${incomingRef}`);
+      }
+    };
+    parseUrlReferral();
+
+
+    // ====================================
+    // REFERRAL PORTAL & LOOKUP SEARCH ENGINE
+    // ====================================
+    const tabApply = document.getElementById('tab-apply');
+    const tabLookup = document.getElementById('tab-lookup');
+    const formTabContent = document.getElementById('form-tab-content');
+    const lookupTabContent = document.getElementById('lookup-tab-content');
+    const portalTabs = document.getElementById('portal-tabs');
+
+    // Switch between tabs
+    if (tabApply && tabLookup) {
+      tabApply.addEventListener('click', () => {
+        tabApply.classList.add('border-brandOrange', 'text-white');
+        tabApply.classList.remove('border-transparent', 'text-slate-400');
+        tabLookup.classList.remove('border-brandOrange', 'text-white');
+        tabLookup.classList.add('border-transparent', 'text-slate-400');
+
+        formTabContent.classList.remove('hidden');
+        lookupTabContent.classList.add('hidden');
+      });
+
+      tabLookup.addEventListener('click', () => {
+        tabLookup.classList.add('border-brandOrange', 'text-white');
+        tabLookup.classList.remove('border-transparent', 'text-slate-400');
+        tabApply.classList.remove('border-brandOrange', 'text-white');
+        tabApply.classList.add('border-transparent', 'text-slate-400');
+
+        lookupTabContent.classList.remove('hidden');
+        formTabContent.classList.add('hidden');
+      });
+    }
+
+    const lookupInput = document.getElementById('lookup-input');
+    const lookupSubmitBtn = document.getElementById('lookup-submit-btn');
+    const lookupError = document.getElementById('lookup-error');
+    const lookupSpinner = document.getElementById('lookup-spinner');
+
+    const handleLookup = async () => {
+      let searchVal = lookupInput.value.trim().toUpperCase();
+      if (searchVal.length === 0) return;
+
+      // Gracefully handle full sharing URLs being pasted instead of just the code
+      if (searchVal.includes('?REF=')) {
+        try {
+          const urlObj = new URL(lookupInput.value.trim());
+          const refParam = urlObj.searchParams.get('ref');
+          if (refParam) {
+            searchVal = refParam.trim().toUpperCase();
+          }
+        } catch (urlErr) {
+          const match = searchVal.match(/\?REF=([^&]+)/);
+          if (match && match[1]) {
+            searchVal = match[1].trim().toUpperCase();
+          }
+        }
+      } else if (searchVal.startsWith('HTTP') && searchVal.includes('REF=')) {
+        const parts = searchVal.split('REF=');
+        if (parts.length > 1) {
+          searchVal = parts[1].split('&')[0].trim().toUpperCase();
+        }
+      }
+
+      lookupSubmitBtn.disabled = true;
+      lookupSpinner.classList.remove('hidden');
+      lookupError.classList.add('hidden');
+
+      try {
+        // Query the live serverless database for real-time stats
+        const data = await dbLookupAmbassador(searchVal);
+        if (data && data.found) {
+          refCount = data.count || 0;
+          customRefCode = data.code;
+          referredFriendsList = data.referrals || [];
+
+          // Setup Dashboard View
+          document.getElementById('referral-code-badge').innerText = customRefCode;
+          const origin = window.location.origin || "https://missionbillionaire.netlify.app";
+          document.getElementById('referral-link-input').value = `${origin}/?ref=${customRefCode}`;
+
+          updateReferralDashboard();
+
+          // Slide transition
+          if (portalTabs) portalTabs.classList.add('hidden');
+          formView.classList.add('hidden');
+          lookupTabContent.classList.add('hidden');
+
+          successView.classList.remove('hidden');
+          successView.classList.add('opacity-100');
+
+          triggerSuccessConfetti();
+          applicationContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          lookupSubmitBtn.disabled = false;
+          lookupSpinner.classList.add('hidden');
+          return;
+        }
+      } catch (err) {
+        console.warn("Real-time database lookup failed, using local storage fallback:", err);
+      }
+
+      // Local fallback (if database offline or client unregistered in database)
+      const savedName = localStorage.getItem('mb_user_fullname');
+      const savedCode = localStorage.getItem('mb_user_ref_code');
+      const savedCount = localStorage.getItem('mb_user_ref_count');
+
+      let found = false;
+
+      if (savedName && savedCode) {
+        if (searchVal.toLowerCase() === savedName.toLowerCase() || searchVal.toLowerCase() === savedCode.toLowerCase()) {
+          found = true;
+          refCount = parseInt(savedCount || '0');
+          customRefCode = savedCode;
+          referredFriendsList = []; // Default empty on local storage fallback
+
+          // Setup Dashboard View
+          document.getElementById('referral-code-badge').innerText = customRefCode;
+          const origin = window.location.origin || "https://missionbillionaire.netlify.app";
+          document.getElementById('referral-link-input').value = `${origin}/?ref=${customRefCode}`;
+
+          updateReferralDashboard();
+        }
+      }
+
+      if (found) {
+        // Dynamic slide transition
+        if (portalTabs) portalTabs.classList.add('hidden');
+        formView.classList.add('hidden');
+        lookupTabContent.classList.add('hidden');
+
+        successView.classList.remove('hidden');
+        successView.classList.add('opacity-100');
+
+        triggerSuccessConfetti();
+        applicationContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        lookupError.classList.remove('hidden');
+      }
+
+      lookupSubmitBtn.disabled = false;
+      lookupSpinner.classList.add('hidden');
+    };
+
+    if (lookupSubmitBtn) {
+      lookupSubmitBtn.addEventListener('click', handleLookup);
+      lookupInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleLookup();
+      });
+    }
+
+
+
+    // Portal Logout return button handler
+    const logoutBtn = document.getElementById('logout-portal-btn');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        successView.classList.add('hidden');
+        if (portalTabs) portalTabs.classList.remove('hidden');
+        formView.classList.remove('hidden');
+        formView.classList.remove('opacity-0');
+
+        // Reset tabs to Apply by default
+        tabApply.click();
+
+        applicationContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }
+
+    // Sticky Navbar & Mobile links check lookup clicks
+    const navLookupBtn = document.getElementById('nav-lookup-btn');
+    const mobileLookupBtn = document.getElementById('mobile-lookup-btn');
+
+    const scrollToLookup = () => {
+      const applySection = document.getElementById('apply');
+      if (applySection) {
+        applySection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Open lookup tab automatically
+        if (tabLookup) {
+          tabLookup.click();
+        }
+
+        setTimeout(() => {
+          if (lookupInput) lookupInput.focus();
+        }, 800);
+      }
+    };
+
+    if (navLookupBtn) navLookupBtn.addEventListener('click', scrollToLookup);
+    if (mobileLookupBtn) {
+      mobileLookupBtn.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.classList.add('hidden');
+          menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        }
+        scrollToLookup();
+      });
+    }
+
+  </script>
+</body>
+
+</html>

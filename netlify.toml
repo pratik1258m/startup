@@ -1,0 +1,31 @@
+# Netlify Configuration File
+# Configures the build settings, serverless functions directory, 
+# redirects, and global security response headers.
+
+[build]
+  # Publish directory is the root since it's a premium static page
+  publish = "."
+  # Location of the Netlify serverless functions
+  functions = "netlify/functions"
+
+# Proxy redirect for clean API calls in frontend JS
+[[redirects]]
+  from = "/api/get-links"
+  to = "/.netlify/functions/get-links"
+  status = 200
+
+[[redirects]]
+  from = "/api/referrals"
+  to = "/.netlify/functions/referrals"
+  status = 200
+
+# Global security headers for the landing page
+[[headers]]
+  for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-Content-Type-Options = "nosniff"
+      X-XSS-Protection = "1; mode=block"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+      # Secure policies while allowing Google Fonts, Tailwind Play CDN, and canvas-confetti script
+      Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https: img.icons8.com; connect-src 'self' https:;"

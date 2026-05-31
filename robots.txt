@@ -1,0 +1,9 @@
+# robots.txt configuration for Growth Warrior
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Host and Sitemap locations
+Host: https://missionbillionaire.netlify.app
+Sitemap: https://missionbillionaire.netlify.app/sitemap.xml
