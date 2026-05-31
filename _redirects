@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.growthwarrior.netlify.app/* https://growthwarrior.netlify.app/:splat 301!
+
+# Redirect index.html to clean root
+/index.html https://growthwarrior.netlify.app/ 301!

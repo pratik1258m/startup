@@ -5,5 +5,5 @@ User-agent: *
 Allow: /
 
 # Host and Sitemap locations
-Host: https://missionbillionaire.netlify.app
-Sitemap: https://missionbillionaire.netlify.app/sitemap.xml
+Host: https://growthwarrior.netlify.app
+Sitemap: https://growthwarrior.netlify.app/sitemap.xml
