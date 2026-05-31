@@ -3,8 +3,10 @@
 # redirects, and global security response headers.
 
 [build]
-  # Publish directory is the root since it's a premium static page
-  publish = "."
+  # Build command to automatically generate the dist folder during deploy
+  command = "mkdir -p dist && cp index.html robots.txt sitemap.xml googleef478a5a18c50b12.html _headers _redirects dist/ && cp -r netlify dist/"
+  # Publish directory is the dist folder for clean deployment
+  publish = "dist"
   # Location of the Netlify serverless functions
   functions = "netlify/functions"
 

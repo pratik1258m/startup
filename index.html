@@ -1346,7 +1346,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
             <!-- Button: Join Community -->
-            <a id="success-community-btn" href="#" target="_blank"
+            <a id="success-community-btn" href="https://chat.whatsapp.com/Fvle1AqA2IuFMrRCN89IA2" target="_blank"
               class="glass-panel p-5 rounded-2xl border border-white/[0.08] hover:border-neonGreen/30 hover:bg-white/[0.04] transition-all flex items-center gap-4 group">
               <div
                 class="w-12 h-12 rounded-xl bg-neonGreen/10 flex items-center justify-center text-neonGreen group-hover:scale-105 transition-transform duration-300">
@@ -1364,7 +1364,7 @@
             </a>
 
             <!-- Button: Download Gift Book -->
-            <a id="success-gift-btn" href="#" target="_blank"
+            <a id="success-gift-btn" href="https://drive.google.com/drive/folders/109vVuWoOWRovIJgkgN_C1LP9TPI2sxVA?usp=sharing" target="_blank"
               class="glass-panel p-5 rounded-2xl border border-white/[0.08] hover:border-cyberCyan/30 hover:bg-white/[0.04] transition-all flex items-center gap-4 group">
               <div
                 class="w-12 h-12 rounded-xl bg-cyberCyan/10 flex items-center justify-center text-cyberCyan group-hover:scale-105 transition-transform duration-300">
@@ -1963,6 +1963,9 @@
         loader.classList.add('opacity-0');
         setTimeout(() => loader.style.display = 'none', 500);
       }, 800); // 800ms natural delay for premium feel
+
+      // Load secure/dynamic success button links
+      loadSuccessLinks();
     });
 
     // Sticky Nav shadow on scroll
@@ -2206,6 +2209,38 @@
       }
     });
 
+    // Fetch secure invite and gift links from Netlify Function
+    const loadSuccessLinks = async () => {
+      let communityLink = "https://chat.whatsapp.com/Fvle1AqA2IuFMrRCN89IA2";
+      let giftLink = "https://drive.google.com/drive/folders/109vVuWoOWRovIJgkgN_C1LP9TPI2sxVA?usp=sharing";
+
+      // Detect if we are on a standard local static server (e.g. Live Server on 127.0.0.1:5500)
+      // to avoid triggering browser console 404 errors for Netlify API calls.
+      const isStaticLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && window.location.port !== '8888';
+
+      if (!isStaticLocal) {
+        try {
+          const linksResponse = await fetch('/api/get-links');
+          if (linksResponse.ok) {
+            const data = await linksResponse.json();
+            if (data.success) {
+              communityLink = data.communityLink;
+              giftLink = data.giftLink;
+            }
+          }
+        } catch (apiErr) {
+          console.warn("Could not retrieve links from serverless API, using fallback defaults:", apiErr);
+        }
+      } else {
+        console.log("Static local server detected. Using secure fallback links to prevent 404 console errors.");
+      }
+
+      const communityBtn = document.getElementById('success-community-btn');
+      const giftBtn = document.getElementById('success-gift-btn');
+      if (communityBtn) communityBtn.href = communityLink;
+      if (giftBtn) giftBtn.href = giftLink;
+    };
+
     // Form submission event
     applicationForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -2280,26 +2315,8 @@
         const incomingRefCode = localStorage.getItem('mb_incoming_referrer') || '';
         await dbRegisterUser(userName, customRefCode, incomingRefCode);
 
-        // Fetch secure invite and gift links from Netlify Function
-        let communityLink = "https://chat.whatsapp.com/Fvle1AqA2IuFMrRCN89IA2";
-        let giftLink = "https://drive.google.com/drive/folders/109vVuWoOWRovIJgkgN_C1LP9TPI2sxVA?usp=sharing";
-
-        try {
-          const linksResponse = await fetch('/api/get-links');
-          if (linksResponse.ok) {
-            const data = await linksResponse.json();
-            if (data.success) {
-              communityLink = data.communityLink;
-              giftLink = data.giftLink;
-            }
-          }
-        } catch (apiErr) {
-          console.warn("Could not retrieve links from serverless API, using fallback defaults:", apiErr);
-        }
-
-        // Set action button target links
-        document.getElementById('success-community-btn').href = communityLink;
-        document.getElementById('success-gift-btn').href = giftLink;
+        // Fetch secure invite and gift links and populate the success buttons
+        await loadSuccessLinks();
 
         // Visual SPA Screen Transition
         formView.classList.add('opacity-0');
