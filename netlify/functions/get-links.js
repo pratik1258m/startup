@@ -26,8 +26,8 @@ exports.handler = async (event, context) => {
 
   try {
     // Read secure environment variables or supply ready-to-use high-quality fallbacks
-    const communityLink = process.env.COMMUNITY_LINK || "https://chat.whatsapp.com/KxF7bL9aC2D5h8F3m9J1qZ"; 
-    const giftLink = process.env.GIFT_LINK || "https://drive.google.com/file/d/1uTz4FzT3-H1Y6m9Qn9p_E5d6A7B8C9D/view?usp=sharing";
+    const communityLink = process.env.COMMUNITY_LINK || "https://chat.whatsapp.com/Fvle1AqA2IuFMrRCN89IA2"; 
+    const giftLink = process.env.GIFT_LINK || "https://drive.google.com/drive/folders/109vVuWoOWRovIJgkgN_C1LP9TPI2sxVA?usp=sharing";
 
     return {
       statusCode: 200,
